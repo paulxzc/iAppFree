@@ -103,7 +103,7 @@
                 <outlet property="shares" destination="AuH-rQ-LwY" id="oh7-W7-eKd"/>
                 <outlet property="starCurrent" destination="7lP-e6-vyj" id="uUr-9C-k17"/>
             </connections>
-            <point key="canvasLocation" x="530.5" y="390"/>
+            <point key="canvasLocation" x="333.5" y="374"/>
         </tableViewCell>
     </objects>
     <resources>

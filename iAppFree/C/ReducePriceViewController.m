@@ -30,6 +30,7 @@
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     [[self navigationItem] setTitle:@"降价"];
     
+    // 下载数据
     [DownloadData getReducePriceDataWithBlock:^(NSArray *data, NSError *error) {
         _applications = [data retain];
         [_tableView reloadData];

@@ -14,6 +14,8 @@
 + (NSURLSessionDataTask *)getLimitFreeDataWithBlock:(void (^)(NSArray *data, NSError *error))block;
 #pragma mark --降价
 + (NSURLSessionDataTask *)getReducePriceDataWithBlock:(void (^)(NSArray *data, NSError *error))block;
+#pragma mark --免费
++ (NSURLSessionDataTask *)getAppFreeDataWithBlock:(void (^)(NSArray *data, NSError *error))block;
 #pragma mark --专题
 + (NSURLSessionDataTask *)getSubjectDataWithBlock:(void (^)(NSArray *data, NSError *error))block;
 

@@ -46,7 +46,6 @@
     
     // 去除多余的分割线
     [_tableView setTableFooterView:[[[UIView alloc] init] autorelease]];
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -111,6 +111,8 @@
 		B79A0D051B0F30C5005F8BCD /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0CA01B0F30C5005F8BCD /* UIImageView+HighlightedWebCache.m */; };
 		B79A0D061B0F30C5005F8BCD /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0CA21B0F30C5005F8BCD /* UIImageView+WebCache.m */; };
 		B79A0D071B0F30C5005F8BCD /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0CA41B0F30C5005F8BCD /* UIView+WebCacheOperation.m */; };
+		B79A0D0B1B0F3625005F8BCD /* AppFreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0D091B0F3625005F8BCD /* AppFreeTableViewCell.m */; };
+		B79A0D0C1B0F3625005F8BCD /* AppFreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79A0D0A1B0F3625005F8BCD /* AppFreeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +289,9 @@
 		B79A0CA21B0F30C5005F8BCD /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		B79A0CA31B0F30C5005F8BCD /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		B79A0CA41B0F30C5005F8BCD /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		B79A0D081B0F3625005F8BCD /* AppFreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppFreeTableViewCell.h; sourceTree = "<group>"; };
+		B79A0D091B0F3625005F8BCD /* AppFreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppFreeTableViewCell.m; sourceTree = "<group>"; };
+		B79A0D0A1B0F3625005F8BCD /* AppFreeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppFreeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,12 +414,12 @@
 		B79A0C181B0F30C4005F8BCD /* NetWorking */ = {
 			isa = PBXGroup;
 			children = (
+				B79A0C1B1B0F30C4005F8BCD /* AFNetworking */,
+				B79A0C311B0F30C4005F8BCD /* UIKit+AFNetworking */,
 				B79A0C191B0F30C4005F8BCD /* AFAppDotNetAPIClient.h */,
 				B79A0C1A1B0F30C4005F8BCD /* AFAppDotNetAPIClient.m */,
-				B79A0C1B1B0F30C4005F8BCD /* AFNetworking */,
 				B79A0C2F1B0F30C4005F8BCD /* DownloadData.h */,
 				B79A0C301B0F30C4005F8BCD /* DownloadData.m */,
-				B79A0C311B0F30C4005F8BCD /* UIKit+AFNetworking */,
 			);
 			path = NetWorking;
 			sourceTree = "<group>";
@@ -544,6 +549,9 @@
 				B79A0C761B0F30C4005F8BCD /* ReducePriceTableViewCell.h */,
 				B79A0C771B0F30C4005F8BCD /* ReducePriceTableViewCell.m */,
 				B79A0C781B0F30C4005F8BCD /* ReducePriceTableViewCell.xib */,
+				B79A0D081B0F3625005F8BCD /* AppFreeTableViewCell.h */,
+				B79A0D091B0F3625005F8BCD /* AppFreeTableViewCell.m */,
+				B79A0D0A1B0F3625005F8BCD /* AppFreeTableViewCell.xib */,
 				B79A0C791B0F30C4005F8BCD /* SubjectAppTableViewCell.h */,
 				B79A0C7A1B0F30C4005F8BCD /* SubjectAppTableViewCell.m */,
 				B79A0C7B1B0F30C4005F8BCD /* SubjectAppTableViewCell.xib */,
@@ -724,6 +732,7 @@
 				B79A0CDB1B0F30C5005F8BCD /* tabbar_limitfree_press@2x.png in Resources */,
 				B79A0CC61B0F30C5005F8BCD /* appproduct_appdefault.png in Resources */,
 				B79A0CE41B0F30C5005F8BCD /* tabBar_Slider.png in Resources */,
+				B79A0D0C1B0F3625005F8BCD /* AppFreeTableViewCell.xib in Resources */,
 				B79A0CD71B0F30C5005F8BCD /* tabbar_bg@2x.png in Resources */,
 				B79A0CD51B0F30C5005F8BCD /* tabbar_appfree_press@2x.png in Resources */,
 				B79A0CE91B0F30C5005F8BCD /* tabbar_subject_press@2x.png in Resources */,
@@ -772,6 +781,7 @@
 				B79A0CB41B0F30C5005F8BCD /* AFHTTPRequestOperation.m in Sources */,
 				B79A0CB11B0F30C5005F8BCD /* Application.m in Sources */,
 				B79A0CFF1B0F30C5005F8BCD /* SDWebImageManager.m in Sources */,
+				B79A0D0B1B0F3625005F8BCD /* AppFreeTableViewCell.m in Sources */,
 				B79A0CB31B0F30C5005F8BCD /* AFAppDotNetAPIClient.m in Sources */,
 				B79A0CAD1B0F30C5005F8BCD /* RootTabBarController.m in Sources */,
 				B79A0CBE1B0F30C5005F8BCD /* AFNetworkActivityIndicatorManager.m in Sources */,

@@ -51,6 +51,25 @@
     }];
 }
 
++ (NSURLSessionDataTask *)getAppFreeDataWithBlock:(void (^)(NSArray *, NSError *))block {
+    return [[AFAppDotNetAPIClient sharedClient] GET:@"free/applications/free?currency=rmb" parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *JSON) {
+        NSMutableArray *mutableArray = [NSMutableArray array];
+        NSArray *apps = JSON[@"applications"];
+        for (NSDictionary *dic in apps) {
+            Application *app = [[Application alloc] initWithDic:dic];
+            [mutableArray addObject:app];
+            [app release];
+        }
+        if (block) {
+            block([NSArray arrayWithArray:mutableArray], nil);
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (block) {
+            block([NSArray array], error);
+        }
+    }];
+}
+
 + (NSURLSessionDataTask *)getSubjectDataWithBlock:(void (^)(NSArray *, NSError *))block {
     return [[AFAppDotNetAPIClient sharedClient] GET:@"free/special?page=1&limit=5" parameters:nil success:^(NSURLSessionDataTask *task, NSArray *JSON) {
         NSMutableArray *mutableArray = [NSMutableArray array];
