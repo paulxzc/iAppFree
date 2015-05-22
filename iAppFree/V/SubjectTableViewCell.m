@@ -40,6 +40,7 @@
     [_descLabel setAdjustsFontSizeToFitWidth:YES];
     [_tableView setDelegate:self];
     [_tableView setDataSource:self];
+    [self setBackgroundColor:TABLEVIEW_COLOR];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

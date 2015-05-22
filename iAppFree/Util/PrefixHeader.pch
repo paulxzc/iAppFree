@@ -15,5 +15,6 @@
 #import "DownloadData.h"
 #import "Help.h"
 #import "SVProgressHUD.h"
+#import "MJRefresh.h"
 
 #endif

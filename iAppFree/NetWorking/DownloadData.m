@@ -13,8 +13,8 @@
 
 @implementation DownloadData
 
-+ (NSURLSessionDataTask *)getLimitFreeDataWithBlock:(void (^)(NSArray *data, NSError *error))block {
-    return [[AFAppDotNetAPIClient sharedClient] GET:@"free/applications/limited?currency=rmb" parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *JSON) {
++ (NSURLSessionDataTask *)getLimitFreeDataWithBlock:(void (^)(NSArray *data, NSError *error))block andPage:(NSInteger)page {
+    return [[AFAppDotNetAPIClient sharedClient] GET:[NSString stringWithFormat:@"free/applications/limited?currency=rmb&page=%ld", page] parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *JSON) {
         NSMutableArray *mutableArray = [NSMutableArray array];
         NSArray *apps = JSON[@"applications"];
         for (NSDictionary *dic in apps) {
@@ -32,8 +32,9 @@
     }];
 }
 
-+ (NSURLSessionDataTask *)getReducePriceDataWithBlock:(void (^)(NSArray *, NSError *))block {
-    return [[AFAppDotNetAPIClient sharedClient] GET:@"free/applications/sales?currency=rmb" parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *JSON) {
+
++ (NSURLSessionDataTask *)getReducePriceDataWithBlock:(void (^)(NSArray *, NSError *))block andPage:(NSInteger)page {
+    return [[AFAppDotNetAPIClient sharedClient] GET:[NSString stringWithFormat:@"free/applications/sales?currency=rmb&page=%ld", page] parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *JSON) {
         NSMutableArray *mutableArray = [NSMutableArray array];
         NSArray *apps = JSON[@"applications"];
         for (NSDictionary *dic in apps) {
@@ -51,8 +52,8 @@
     }];
 }
 
-+ (NSURLSessionDataTask *)getAppFreeDataWithBlock:(void (^)(NSArray *, NSError *))block {
-    return [[AFAppDotNetAPIClient sharedClient] GET:@"free/applications/free?currency=rmb" parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *JSON) {
++ (NSURLSessionDataTask *)getAppFreeDataWithBlock:(void (^)(NSArray *, NSError *))block andPage:(NSInteger)page {
+    return [[AFAppDotNetAPIClient sharedClient] GET:[NSString stringWithFormat:@"free/applications/free?currency=rmb&page=%ld", page] parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *JSON) {
         NSMutableArray *mutableArray = [NSMutableArray array];
         NSArray *apps = JSON[@"applications"];
         for (NSDictionary *dic in apps) {
@@ -70,8 +71,8 @@
     }];
 }
 
-+ (NSURLSessionDataTask *)getSubjectDataWithBlock:(void (^)(NSArray *, NSError *))block {
-    return [[AFAppDotNetAPIClient sharedClient] GET:@"free/special?page=1&limit=5" parameters:nil success:^(NSURLSessionDataTask *task, NSArray *JSON) {
++ (NSURLSessionDataTask *)getSubjectDataWithBlock:(void (^)(NSArray *, NSError *))block andPage:(NSInteger)page {
+    return [[AFAppDotNetAPIClient sharedClient] GET:[NSString stringWithFormat:@"free/special?page=%ld&limit=5", page] parameters:nil success:^(NSURLSessionDataTask *task, NSArray *JSON) {
         NSMutableArray *mutableArray = [NSMutableArray array];
         for (NSDictionary *dic in JSON) {
             Subject *subject = [[Subject alloc] initWithSubjectData:dic];
