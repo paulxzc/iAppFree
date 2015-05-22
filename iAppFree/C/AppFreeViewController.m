@@ -31,10 +31,13 @@
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     [[self navigationItem] setTitle:@"免费"];
     
+    [SVProgressHUD show];
+    
     // 下载数据
     [DownloadData getAppFreeDataWithBlock:^(NSArray *data, NSError *error) {
         _applications = [data retain];
         [_tableView reloadData];
+        [SVProgressHUD dismiss];
     }];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVGATION_ADD_STATUSBAR_HEIGHT-TABBAR_HEIGHT) style:UITableViewStylePlain];

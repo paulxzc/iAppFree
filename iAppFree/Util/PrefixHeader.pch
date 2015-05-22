@@ -14,5 +14,6 @@
 #import "Macro.h"
 #import "DownloadData.h"
 #import "Help.h"
+#import "SVProgressHUD.h"
 
 #endif

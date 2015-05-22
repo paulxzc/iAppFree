@@ -113,6 +113,9 @@
 		B79A0D071B0F30C5005F8BCD /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0CA41B0F30C5005F8BCD /* UIView+WebCacheOperation.m */; };
 		B79A0D0B1B0F3625005F8BCD /* AppFreeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0D091B0F3625005F8BCD /* AppFreeTableViewCell.m */; };
 		B79A0D0C1B0F3625005F8BCD /* AppFreeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B79A0D0A1B0F3625005F8BCD /* AppFreeTableViewCell.xib */; };
+		B79A0D5B1B0F4BB8005F8BCD /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0D561B0F4BB8005F8BCD /* SVIndefiniteAnimatedView.m */; };
+		B79A0D5C1B0F4BB8005F8BCD /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B79A0D581B0F4BB8005F8BCD /* SVProgressHUD.bundle */; };
+		B79A0D5D1B0F4BB8005F8BCD /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B79A0D5A1B0F4BB8005F8BCD /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,6 +295,12 @@
 		B79A0D081B0F3625005F8BCD /* AppFreeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppFreeTableViewCell.h; sourceTree = "<group>"; };
 		B79A0D091B0F3625005F8BCD /* AppFreeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppFreeTableViewCell.m; sourceTree = "<group>"; };
 		B79A0D0A1B0F3625005F8BCD /* AppFreeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppFreeTableViewCell.xib; sourceTree = "<group>"; };
+		B79A0D551B0F4BB8005F8BCD /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		B79A0D561B0F4BB8005F8BCD /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		B79A0D571B0F4BB8005F8BCD /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		B79A0D581B0F4BB8005F8BCD /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		B79A0D591B0F4BB8005F8BCD /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		B79A0D5A1B0F4BB8005F8BCD /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,6 +574,7 @@
 		B79A0C7F1B0F30C4005F8BCD /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				B79A0D541B0F4BB8005F8BCD /* SVProgressHUD */,
 				B79A0C801B0F30C4005F8BCD /* LPLabel */,
 				B79A0C831B0F30C4005F8BCD /* SDWebImage */,
 			);
@@ -618,6 +628,19 @@
 				B79A0CA41B0F30C5005F8BCD /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		B79A0D541B0F4BB8005F8BCD /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B79A0D551B0F4BB8005F8BCD /* SVIndefiniteAnimatedView.h */,
+				B79A0D561B0F4BB8005F8BCD /* SVIndefiniteAnimatedView.m */,
+				B79A0D571B0F4BB8005F8BCD /* SVProgressHUD-Prefix.pch */,
+				B79A0D581B0F4BB8005F8BCD /* SVProgressHUD.bundle */,
+				B79A0D591B0F4BB8005F8BCD /* SVProgressHUD.h */,
+				B79A0D5A1B0F4BB8005F8BCD /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -737,6 +760,7 @@
 				B79A0CD51B0F30C5005F8BCD /* tabbar_appfree_press@2x.png in Resources */,
 				B79A0CE91B0F30C5005F8BCD /* tabbar_subject_press@2x.png in Resources */,
 				B79A0CAE1B0F30C5005F8BCD /* RootTabBarController.xib in Resources */,
+				B79A0D5C1B0F4BB8005F8BCD /* SVProgressHUD.bundle in Resources */,
 				B79A0CF61B0F30C5005F8BCD /* SubjectTableViewCell.xib in Resources */,
 				B79A0CCA1B0F30C5005F8BCD /* appproduct_starforeground_half_Topic.png in Resources */,
 				B79A0CDA1B0F30C5005F8BCD /* tabbar_limitfree_press.png in Resources */,
@@ -775,6 +799,7 @@
 				B79A0CC21B0F30C5005F8BCD /* UIImageView+AFNetworking.m in Sources */,
 				B79A0CF11B0F30C5005F8BCD /* ReducePriceTableViewCell.m in Sources */,
 				B79A0CFB1B0F30C5005F8BCD /* SDWebImageCompat.m in Sources */,
+				B79A0D5D1B0F4BB8005F8BCD /* SVProgressHUD.m in Sources */,
 				B79A0CF71B0F30C5005F8BCD /* LPLabel.m in Sources */,
 				B79A0CC11B0F30C5005F8BCD /* UIButton+AFNetworking.m in Sources */,
 				B79A0D011B0F30C5005F8BCD /* UIButton+WebCache.m in Sources */,
@@ -799,6 +824,7 @@
 				B79A0CA71B0F30C5005F8BCD /* LimitFreeViewController.m in Sources */,
 				B79A0D051B0F30C5005F8BCD /* UIImageView+HighlightedWebCache.m in Sources */,
 				B79A0CBB1B0F30C5005F8BCD /* AFURLResponseSerialization.m in Sources */,
+				B79A0D5B1B0F4BB8005F8BCD /* SVIndefiniteAnimatedView.m in Sources */,
 				B79A0CBA1B0F30C5005F8BCD /* AFURLRequestSerialization.m in Sources */,
 				B79A0CB91B0F30C5005F8BCD /* AFURLConnectionOperation.m in Sources */,
 				B79A0CB51B0F30C5005F8BCD /* AFHTTPRequestOperationManager.m in Sources */,
@@ -1010,6 +1036,7 @@
 				B79A0BFC1B0F2DC0005F8BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B79A0BFD1B0F2DC0005F8BCD /* Build configuration list for PBXNativeTarget "iAppFreeTests" */ = {
 			isa = XCConfigurationList;
@@ -1018,6 +1045,7 @@
 				B79A0BFF1B0F2DC0005F8BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -31,10 +31,13 @@
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     [[self navigationItem] setTitle:@"专题"];
     
+    [SVProgressHUD show];
+    
     // 下载数据
     [DownloadData getSubjectDataWithBlock:^(NSArray *data, NSError *error) {
         _subjects = [data retain];
         [_tableView reloadData];
+        [SVProgressHUD dismiss];
     }];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVGATION_ADD_STATUSBAR_HEIGHT-TABBAR_HEIGHT) style:UITableViewStylePlain];
