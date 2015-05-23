@@ -63,6 +63,7 @@
     [DownloadData getSubjectDataWithBlock:^(NSArray *data, NSError *error) {
         [_subjects addObjectsFromArray:data];
         [_tableView reloadData];
+        [[_tableView footer] endRefreshing];
     } andPage:page++];
 }
 
@@ -71,10 +72,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row % 5 == 0) {
-        [[_tableView footer] setHidden:YES];
-        [[_tableView footer] setHidden:NO];
-    }
     SubjectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SubjectCell"];
     [cell refreshCell:_subjects[indexPath.row]];
     return cell;

@@ -60,9 +60,11 @@
 
 - (void)continueLoadData {
     static NSInteger page = 2;
+    
     [DownloadData getLimitFreeDataWithBlock:^(NSArray *data, NSError *error) {
         [_applications addObjectsFromArray:data];
         [_tableView reloadData];
+        [[_tableView footer] endRefreshing];
     } andPage:page++];
 }
 
@@ -71,10 +73,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row % 10 == 0) {
-        [[_tableView footer] setHidden:YES];
-        [[_tableView footer] setHidden:NO];
-    }
     LimitFreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LimitFreeCell"];
     [cell refreshCell:_applications[indexPath.row] andIndex:indexPath.row];
     return cell;

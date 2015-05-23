@@ -63,6 +63,7 @@
     [DownloadData getAppFreeDataWithBlock:^(NSArray *data, NSError *error) {
         [_applications addObjectsFromArray:data];
         [_tableView reloadData];
+        [[_tableView footer] endRefreshing];
     } andPage:page++];
 }
 
@@ -71,10 +72,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row % 10 == 0) {
-        [[_tableView footer] setHidden:YES];
-        [[_tableView footer] setHidden:NO];
-    }
     AppFreeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AppFreeCell"];
     [cell refreshCell:_applications[indexPath.row] andIndex:indexPath.row];
     return cell;
