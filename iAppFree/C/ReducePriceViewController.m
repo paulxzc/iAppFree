@@ -81,8 +81,8 @@
     return 120;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row < _page*10 && indexPath.row >= (_page-1)*10) {
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row >= (_page-1)*10) {
         // 1. 配置CATransform3D的内容
         CATransform3D transform;
         // CATransform3DMakeRotation函数创建了一个转变，将在三维轴坐标系以任意弧度旋转层
