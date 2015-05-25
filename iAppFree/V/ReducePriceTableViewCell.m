@@ -57,7 +57,7 @@
 
 - (void)refreshCell:(Application *)app andIndex:(NSInteger)index {
     if (index % 2 == 0) {
-        [self setBackgroundColor:[UIColor colorWithRed:0.863 green:0.894 blue:0.882 alpha:1.000]];
+        [self setBackgroundColor:[UIColor redColor]];
     }
     else {
         [self setBackgroundColor:[UIColor colorWithWhite:0.965 alpha:1.000]];
